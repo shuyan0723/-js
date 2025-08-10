@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.对象声明语法
+    // let 对象名={
+    //   属性名:属性值，
+    //   方法名:函数
+    // }
+    // let 对象名=new Object
+    // 声明一个person的对象 let person ={}
+    // let 舒岩 = {
+    //   uname: '舒岩',
+    //   age: 18,
+    //   girl: false
+    // }
+    // console.log(舒岩)
+    // console.log(typeof 舒岩)
+    //1.声明
+    let 商品 = {
+      goods: '手机',
+      uname: '华为',
+      num: 89757,
+      weight: '400g',
+      address: '广东'
+    }
+    // console.log(商品);
+    // console.log(typeof 商品);
+    // console.log(address);
+    //2.使用属性 查 对象名. 属性名
+    console.log(商品.weight);
+    //3.改.把地址改为江苏
+    // 对象名.属性名 = 新值
+    商品.address = '江苏'
+    console.log(商品.address);
+    //3.增.对象名.新属性=新值
+    商品.价格 = 5000
+    console.log(商品.价格);
+    //4.删.delete 对象名.属性
+    delete 商品.num
+    console.log(商品);
+
+  </script>
+</body>
+
+</html>

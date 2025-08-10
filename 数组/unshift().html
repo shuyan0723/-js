@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //shift 消除第一个元素
+    var names = ["shu", "yan", "shi", "ECUT", "student"]
+    var result = names.shift();
+
+    console.log(names);
+    console.log(result);
+    // shift(): 清空数组元素
+    var arr1 = [1, 2, 3, 4, 5]
+    var item;
+    while (item = arr1.shift()) {
+      console.log(item);
+    }
+    console.log(arr1);
+    //unshift 用于数组头部第一个添加元素，并返回添加后的新元素，该方法会改变原数组
+    var arr2 = [10]
+    arr2.unshift(8, 9)
+    console.log(arr2);
+
+  </script>
+</body>
+
+</html>

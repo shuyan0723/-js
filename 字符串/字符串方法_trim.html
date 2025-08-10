@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var name = "     shuyan       "
+    var result = name.trim();
+    console.log(result, name);
+
+    var name1 = "\r\nshuyan \t";
+    console.log(name1);
+    console.log(name1.trim());
+    //中间去不掉 只能去掉前后
+    //单独去掉头部或尾部
+    var name2 = "   shuyan    ";
+    console.log(name2.trimStart());
+    console.log(name2.trimEnd());
+
+
+
+  </script>
+</body>
+
+</html>

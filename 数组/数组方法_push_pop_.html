@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var arr = ["hello"];
+    // arr[1] = "大家好";
+    // console.log(arr);
+    arr.push("大家好")
+    console.log(arr);
+    //看长度,方法都会改变原数组
+    var length = arr.push("我是舒岩", '来自东华理工大学', '21', [], {})
+    console.log(arr);
+
+    console.log(length);
+    arr.pop()
+    console.log(arr);
+
+    console.log(length);
+
+  </script>
+</body>
+
+</html>

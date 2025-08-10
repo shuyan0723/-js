@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str1 = "HelloWorld";
+    //判断上述字符串中是否存在e这个词汇
+    console.log(str1.indexOf("e")); 1
+    console.log(str1.indexOf("x")); -1
+    var str2 = "舒岩在学习编程"
+    console.log(str2.indexOf("学习")); 3
+
+    //判断有没有字符t
+    var str3 = "this is a book";
+    console.log(str3.indexOf("t", 2)); //-1 判断2后面还有没有t
+
+    if (str2.indexOf("学习") > -1) {
+      console.log("他很努力");
+    } else {
+      console.log("他在混账");
+
+    }
+
+  </script>
+</body>
+
+</html>

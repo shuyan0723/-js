@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //创建一个对象user
+    var user = {
+      name: "shuyan",
+      age: 21,
+      job: ["student", "son"],
+      isSingle: true,
+      getName: function () {
+        console.log("舒岩");
+      },
+      container: {
+        frontEnd: "web前端"
+      }
+    }
+    // 对象的读取方式:对象名.属性
+    console.log(user.name);
+    user.getName();
+    for (var i = 0; i < user.job.length; i++) {
+      console.log(user.job[i]);
+    }
+
+
+    //链式调用
+    console.log(user.container.frontEnd);
+
+  </script>
+</body>
+
+</html>

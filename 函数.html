@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function 函数(x, y) {
+    //   console.log(x + y);//虽然是同一套模板，但参数不一样，可以得到不一样的结果。
+
+    // }
+    // 函数(10, 20);
+    // 函数(20, 40);
+    // 函数(100, 200);
+    // 函数(40, 70);
+    //函数是一段可以反复调用的代码块
+    function 函数(x, y) {
+      console.log(111); //可以执行
+      return x + y    //return后面不能再添加任何代码因为不会执行
+      console.log(111);//不能执行
+    }
+    var result = 函数(10, 20);
+    console.log(result);
+
+    function uname() {
+      console.log("shuyan");
+    }
+    uname();
+
+
+  </script>
+</body>
+
+</html>

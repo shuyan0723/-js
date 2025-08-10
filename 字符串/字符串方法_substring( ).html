@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var name = "shuyan";
+    // console.log(name.substring(3, 6));
+    var name = "shuyan";
+    // 参数1：开始位置3包含
+    // 参数2：结束位置（不包含该位置）6
+    result = name.substring(3, 6)
+    console.log(result);
+
+    //第二个位置参数不写,默认到原字符串结尾
+    var result2 = name.substring(3);
+    console.log(result2);
+    //真正写的时候，第二个参数一定要大于第一个  
+    var result3 = name.substring(6, 3)
+    console.log(result3);//自动变成(3,6)
+    //如果参数是负数，substring会自动转换为0
+    var result4 = name.substring(-3)
+    console.log(result4);
+    var result5 = name.substring(-3, 3)
+    console.log(result5);
+  </script>
+</body>
+
+</html>

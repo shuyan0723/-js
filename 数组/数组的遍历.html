@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var user = ["s", "y", "h", "u", "a"];
+    //循环->遍历
+    for (var i = 0; i < user.length; i++) {//i=0,1,2,3,
+      console.log(user[i]);
+    }
+    console.log('--------------');
+
+    var i = 0;
+    while (i < user.length) {
+      console.log(user[i]);
+      i++
+    }
+
+    console.log('--------------');
+    //for...in遍历数组
+    for (var i in user) {
+      console.log(user[i]);
+    }
+  </script>
+</body>
+
+</html>

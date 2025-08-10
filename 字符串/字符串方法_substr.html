@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var name = "shuyan";
+    var result = name.substr(0, 2);
+    console.log(result);//sh
+    //第一个参数是字符串开始的位置，第二个参数是字符串的长度
+    var result1 = name.substr(3);
+    console.log(result1); yan
+    //如果第一个参数是负数，表示倒数计算的字符位置
+    var name1 = "HelloWorld";
+    console.log(name1.substr(5));//world
+    console.log(name1.substr(-5));//world 从后面开始计算
+    //如果第二个参数是负数，将自动转换为0，也就是空字符串
+    console.log(name1.substr(2, -1));//""
+
+  </script>
+</body>
+
+</html>
