@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <script>
+      // XHR对象
+      const getJSON=function(url){
+        const promise=new Promise(function(resolve,reject){
+           // 异步操作：网络请求
+
+          const hander=function(){
+            if(this.readyState!==4){
+                // 0 1 2 3
+
+              return;
+            }
+            if(this.status===200){
+                resolve(this.response)
+            }else{
+                reject(new Error(this.statusText))
+
+            }
+          }
+           const xhr=new XMLHttpRequest();
+           xhr.open('GET',url);
+           xhr.onreadystatechange=hander;
+           xhr.responseType='json';
+           xhr.setRequestHeader('Accept','application/json');
+           xhr.send();
+        })
+        return promise;
+      }
+      getJSON('https://www.baidu.com')
+      .then(function(data){
+        console.log(data);
+      },function(error){
+        console.log(error);
+      })
+
+      
+    </script>
+</body>
+</html>
