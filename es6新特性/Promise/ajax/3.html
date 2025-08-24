@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Example</title>
+</head>
+<body>
+    <h1>Ajax Example</h1>
+    <button id="getDataBtn">Get Data from Server</button>
+    <button id="submitDataBtn">Submit Data to Server</button>
+    <p id="response"></p>
+
+    <script>
+        // 获取数据按钮
+        document.getElementById('getDataBtn').addEventListener('click', () => {
+            fetch('http://localhost:3000/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').textContent = `Server says: ${data.message}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('response').textContent = 'Failed to get data';
+                });
+        });
+
+        // 提交数据按钮
+        document.getElementById('submitDataBtn').addEventListener('click', () => {
+            const data = { name: 'John', age: 30 };
+            fetch('http://localhost:3000/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').textContent = `Server says: ${data.message}`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('response').textContent = 'Failed to submit data';
+            });
+        });
+    </script>
+</body>
+</html>
