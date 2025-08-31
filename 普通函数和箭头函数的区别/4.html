@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+    <script>
+        // 箭头函数没有自己的this
+        // 箭头函数会默认绑定外层this
+        // 向外层作用域中，一层一层查找this，直到有this的定义
+        const obj={
+            sayHi:()=>{
+                console.log(this);//window
+            }
+        }
+        obj.sayHi();
+        // 不适用构造函数，原型函数，don事件函数等等
+    </script>
+</body>
+</html>

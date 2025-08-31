@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>普通函数</title>
+</head>
+<body>
+    <button>点我</button>
+    <script>
+        // 普通函数：谁调用我，this就指向谁
+        // 按照正常的语法来写，所以的变量必须先声明再赋值
+        // 函数不允许声明多个一样的
+        console.log(this);//window
+        function fn(){
+            console.log(this);//window
+        }
+        window.fn();
+        setTimeout(function(){
+            console.log(this);//window
+        },1000)
+        document.querySelector('button').onclick=function(){
+            console.log(this);//button
+        }
+        const obj={
+            sayHi:function(){
+                console.log(this);//obj
+            }
+        }
+        obj.sayHi();
+    </script>
+</body>
+</html>
