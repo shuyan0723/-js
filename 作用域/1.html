@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=10;//全局变量
+        console.log(num);
+        function fn(){
+            console.log(num);
+        }
+        fn();
+        // 2.局部变量
+        function fun(){
+            let str='hello'
+        }
+         console.log(str);
+        fun();
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         const map = new Map()
+// map.set('哈哈')
+// map.set(123)
+// map.set(true)
+// // map 可以是任意数据类型
+// console.log(map);
+
+const map=new Map([['name','张三'],['age',18],[true,123]])
+console.log(map);
+// 判断一个值是否拥有
+console.log(map.has('name'));//true
+console.log(map.has('sex'));//false
+console.log(map.has('age'));//true
+console.log(map.has(true));//true
+//返回 key的value值
+console.log(map.get('name'));//张三
+console.log(map.get('age'));//18
+console.log(map.get(true));//123
+console.log(map.get('sex'));//undefined
+//删除
+map.delete('name')
+console.log(map);//Map(2) { true => 123, 'age' => 18}
+//删除
+map.delete(true)
+console.log(map);//Map(1) { 'age' => 18 }
+console.log(map.entries());//MapIterator { ['age', 18] }
+
+    </script>
+</body>
+</html>

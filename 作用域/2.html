@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>原型链</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        //   function
+        function fn(){
+            num=10  //局部变量来看，强烈不推荐
+        }
+        // console.log(num);
+        fn();
+        console.log(num);
     </script>
 </body>
 </html>
