@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖1</title>
+    <style>
+        h3 {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h3>防抖</h3>
+    <h3>防抖</h3>
+    <h3>防抖</h3>
+    <h3>防抖</h3>
+    <script>
+        // 为什么需要防抖？
+        // 我们抢演唱会门票的时候，
+        // 对于抢票这个按钮我们回点很多次，
+        // 我们每点一次，服务器就会去发动一个请求，
+        // 这样就会造成服务器的压力崩溃，
+        // 而防抖就是单位时间内，只执行一次事件，
+        // 防抖的实现原理就是，
+        // 当事件触发了，我们就会等待一段时间，
+        // 在这段时间内，如果事件没有触发，我们就会执行事件，
+        // 否则，我们就会等待下一次事件触发。  
+
+       
+        function debounce(fn,delay){
+            var timer=null;// 借助闭包
+            return function(){
+                if(timer){
+                    clearTimeout(timer)
+                }
+                timer=setTimeout(fn,delay)
+            }
+        }
+        //  滚动事件
+        window.onscroll=debounce(scrollHandle,300)
+        
+        function scrollHandle(){    
+            var scrollTop=document.documentElement.scrollTop;
+            console.log('页面滚动了'+scrollTop);      
+        }
+    </script>
+</body>
+</html>

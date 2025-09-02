@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        h3 {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h3>节流</h3>
+    <h3>节流</h3>
+    <h3>节流</h3>
+    <h3>节流</h3>
+    <h3>节流</h3>
+    <h3>节流</h3>
+    <script>
+        // 为什么需要节流？
+        // 防抖一直按着不动就不会触发
+        // 如果有人按着滚动条不动，就不会执行，这样也会导致性能损耗
+         function throttle(fn,delay){
+            var vaild=true;
+            return function(){
+                if(!vaild){
+                    return false;
+                vaild=false;
+                }
+                setTimeout(function(){
+                    fn();
+                    vaild=true;
+                },delay)
+            }
+         }
+
+           window.onscroll=throttle(scrollHandle,2000);
+
+           function scrollHandle(){
+            var scrollTop=document.documentElement.scrollTop;
+            console.log(scrollTop);
+           }
+    </script>
+</body>
+</html>
