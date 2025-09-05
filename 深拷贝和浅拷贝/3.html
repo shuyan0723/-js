@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深拷贝</title>
+</head>
+<body>
+    <script>
+        // 深拷贝 拷贝的是对象，不是地址
+        // 三种方式：
+        // 1.通过递归实现深拷贝
+        // 2.lodash/cloneDeep
+        // 3.通过JSON.stringify()实现
+        let i=1
+        function fn(){
+            console.log(`这是第${i}次调用`);
+            if(i>=6){
+                return
+            }
+            i++
+            fn()
+        }
+        fn()
+    </script>
+</body>
+</html>

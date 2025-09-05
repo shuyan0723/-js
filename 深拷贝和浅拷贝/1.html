@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅拷贝</title>
+</head>
+<body>
+    <script>
+        // 深浅拷贝只针对引用类型
+        const obj = {
+            uname: '张三',
+            age: 18,
+            sex: '男'
+        }
+        const o=obj
+        console.log(o);
+        // 直接复制有个问题
+        o.age=20
+        console.log(o);//20
+        console.log(obj);//20
+        // 把栈的地址给了堆，把地址复制过去了
+        // 我原来的对象也改变了
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅拷贝</title>
+</head>
+<body>
+    <script>
+        // 浅拷贝
+        const obj = {
+            uname: '张三',
+            age: 18,
+            family:{
+                baby:'小屁孩'
+            }
+        }
+        // 浅拷贝
+    //    const o={...obj}
+    //    console.log(o);
+    //    o.age=20
+    //    console.log(o);
+    //    console.log(obj);
+    const o={};
+    Object.assign(o,obj)
+    o.age=20
+    o.family.baby='大屁孩'
+    console.log(o);//{uname: '张三', age: 20, family: {baby: '大屁孩'}}
+    console.log(obj);//{uname: '张三', age: 18, family: {baby: '大屁孩'}}
+    // 18没动,但family动了，所以为什么要叫浅拷贝
+    // 里面不要再套那种复杂数据类型了
+    // 拷贝对象之后，里面的属性值事简单数据类型直接拷贝值
+    // 复杂数据类型，拷贝的是地址
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深拷贝 JSON.stringify</title>
+</head>
+<body>
+    <script>
+        const obj={
+            uname:'张三',
+            age:18,
+            hobby:{
+                name:'篮球',
+            }
+           }
+           // 把对象转换为 JSON 字符串
+           // console.log(JSON.stringify(obj));
+           const o=JSON.parse(JSON.stringify(obj))
+           console.log(o);
+           o.hobby.name='足球'
+           console.log(o);
+           console.log(obj);
+           
+    </script>
+</body>
+</html>
