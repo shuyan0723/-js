@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call</title>
+</head>
+<body>
+    <script>
+       const obj = {
+        uname:'张三',
+        age:18
+       }
+        function fn(x,y){
+            console.log(this);       
+            console.log(x,y);
+        }
+        // 1.调用函数，改变this指向
+        // 2.改变this指向
+        fn.call(obj,1,2)
+    </script>
+</body>
+</html>
