@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值作用，没有它会怎么样</title>
+</head>
+<body>
+      <!-- <Button onClick={()=>setCount(count+1)}>+</Button> -->
+      <!-- <Button onClick={()=>setCount(count-1)}>-</Button> -->
+    <script>
+         const users = {
+            name:'小明',
+            age:20,
+            isSingle:true,
+         }
+         console.log(JSON.parse(JSON.stringify(users)));
+         
+       
+         const {name,age,isSingle} = users;
+         console.log(name,age,isSingle);
+          //  console.log(user.name);
+        //  console.log(user.age);
+        //  console.log(user.isSingle);
+        //  const name1=user.name
+        //  console.log(name1);
+        // const [count,setCount]=useState(0)
+
+        const colors=['黑色','绿色','蓝色'];
+        // const [first,second,three]=colors
+        // console.log(first);// 黑色
+        // console.log(second);
+        // console.log(three);
+        const first = colors[0]
+        console.log(first);
+        
+        
+      function greet({name,age}){
+        console.log(`你好${name},你今年${age}`);       
+      }
+      greet({name:'shu',age:20})
+    </script>
+</body>
+</html>

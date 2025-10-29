@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写call apply bind</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            name: 'shuyan',
+        }
+        function fn(x,y) {
+            console.log(this);
+            console.log(x,y);         
+        }
+        fn()
+        fn.call(obj)
+        fn.call(obj,10,20)// 只能传参数，不能传数组
+        fn.apply(obj,[49,50])
+
+        // bind 不执行，返回一个新函数
+
+    </script>
+</body>
+
+</html>
